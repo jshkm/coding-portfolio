@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import ContentBox from './components/ContentBox';
 
 function HomePage() {
   const [isOpen, setIsOpen] = useState(true)
@@ -24,12 +25,12 @@ function HomePage() {
 
   return (
     <div className='flex h-screen w-screen'>
-      <div className={`relative h-full border border-red-500 ${isVisible ? 'w-80' : 'w-0'}`}>
+      <div className={`relative h-full ${isVisible ? 'w-80' : 'w-0'}`}>
         <div className='absolute top-0 left-0 p-6 z-10'>
           <button
             onClick={handleClick}
           >
-            <img className='border-red-500 border scale-x-[1.4] scale-y-125 min-w-[18px]' src={'/icons/menu-icon.svg'} alt={'menu icon'}></img>
+            <img className='scale-x-[1.4] scale-y-125 min-w-[18px]' src={'/icons/menu-icon.svg'} alt={'menu icon'}></img>
           </button>
         </div>
         <AnimatePresence onExitComplete={() => setIsOpen(false)}>
@@ -54,11 +55,11 @@ function HomePage() {
         </AnimatePresence>
       </div>
       <motion.div
-          className={`flex flex-grow justify-start border-red-500 border`}
+          className={`flex flex-grow justify-center items-center`}
           layout
           transition={{ type: "spring", stiffness: 77, damping: 16 }}
       >
-        <p>content</p>
+        <ContentBox></ContentBox>
       </motion.div>
     </div>
   )
