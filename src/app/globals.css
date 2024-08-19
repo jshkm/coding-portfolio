@@ -7,15 +7,24 @@ body {
   color: white
 }
 
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.blinking-cursor {
+  display: inline-block;
+  width: 1px; /* Adjust the width as needed */
+  height: 1em; /* This should match the line height of the text */
+  background-color: white; /* Adjust color as needed */
+  animation: blink 1s step-start infinite;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
-
-/* Track */
-/* ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 0px; 
-} */
 
 /* Handle */
 ::-webkit-scrollbar-thumb {

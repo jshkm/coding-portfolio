@@ -28,11 +28,24 @@ const Card = ({ page }: { page: PageType }) => {
 }
 
 const SearchBar = () => {
-  return (
-    <div className='bg-[#1E1F20] h-16 max-w-[824px] w-full rounded-full'>
-        
-    </div>
-  )
+    return (
+        <div className='flex items-center justify-start bg-[#1E1F20] h-16 max-w-[824px] w-full rounded-full p-6'>
+            <p className='text-[#B1B2B2]'>Content goes here<span className="blinking-cursor translate-y-[3px]"></span></p>
+        </div>
+    )
+}
+
+const Header = () => {
+    return (
+        <div className='flex justify-end items-center h-full w-full space-x-6'>
+            <button>
+                <img className='min-h-9' src={'/icons/grid-icon.svg'} alt={'grid icon'}></img>
+            </button>
+            <button>
+                <img className='rounded-full max-h-9' src={'/images/me.jpg'} alt={'profile pic'}></img>
+            </button>
+        </div>
+    )
 }
 
 
@@ -40,7 +53,7 @@ function ContentBox({ pages }: ContentBoxProps) {
     return (
         <div className='flex flex-col justify-between items-center h-full w-full px-10 py-6'>
             <div className='flex w-full h-10'>
-                <h1>think of something creative to put here</h1>
+                <Header></Header>
             </div>
             <div className='flex flex-col items-center w-full space-y-20'>
                 <div className='text-5xl space-y-7 text-wrap'>
