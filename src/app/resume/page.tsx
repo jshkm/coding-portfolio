@@ -1,15 +1,15 @@
 "use client";
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import HomeContentBox from './HomeContentBox';
-import Sidebar from './components/Sidebar'
-import pages from '../data/pages'
+import ResumeContentBox from './ResumeContentBox';
+import Sidebar from '../components/Sidebar'
+import pages from '../../data/pages'
 
-function HomePage() {
+function ResumePage() {
 
-  const [isVisible, setIsVisible] = useState(false)
-  const [isOpen, setIsOpen] = useState(false)
-  const currPage = ''
+  const [isOpen, setIsOpen] = useState(true)
+  const [isVisible, setIsVisible] = useState(true)
+  const currPage = '/resume'
 
   return (
     <div className='flex h-screen w-screen'>
@@ -19,10 +19,10 @@ function HomePage() {
         layout
         transition={{ type: "spring", stiffness: 77, damping: 16 }}
       >
-        <HomeContentBox pages={pages}></HomeContentBox>
+        <ResumeContentBox pages={pages}></ResumeContentBox>
       </motion.div>
     </div>
   )
 }
 
-export default HomePage
+export default ResumePage
