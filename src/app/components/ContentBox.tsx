@@ -1,5 +1,6 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion'
 
 interface PageType {
     text: string;
@@ -28,19 +29,52 @@ const Card = ({ page }: { page: PageType }) => {
 }
 
 const SearchBar = () => {
+    const barContent = [
+        { 'text': 'Click to add Josh on Linkedin!', 'url': 'https://www.linkedin.com/in/jshkm10/' },
+        { 'text': 'Did you know Josh is also a photographer? Click here to see his work.', 'url': 'https://www.jshkmphoto.com' },
+    ]
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % barContent.length);
+        }, 4000); // Change item every 3 seconds
+
+        return () => clearInterval(interval); // Cleanup interval on unmount
+    }, [barContent.length]);
+
     return (
-        <div className='flex items-center justify-start bg-[#1E1F20] h-16 max-w-[824px] w-full rounded-full p-6'>
-            <p className='text-[#B1B2B2]'>Content goes here<span className="blinking-cursor translate-y-[3px]"></span></p>
-        </div>
+        <Link href={barContent[currentIndex].url} className='h-16 max-w-[824px] w-full'>
+            <button
+                className='flex items-center justify-start bg-[#1E1F20] h-full w-full rounded-full p-6'>
+                <AnimatePresence mode='wait'>
+                    <motion.p
+                        key={currentIndex}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.5 }}
+                        className='text-[#B1B2B2]'
+                    >
+                        {barContent[currentIndex].text}<span className="blinking-cursor translate-y-[3px]"></span>
+                    </motion.p>
+                </AnimatePresence>
+            </button>
+        </Link >
     )
 }
 
 const Header = () => {
     return (
         <div className='flex justify-end items-center h-full w-full space-x-6'>
-            <button>
-                <img className='min-h-9' src={'/icons/grid-icon.svg'} alt={'grid icon'}></img>
-            </button>
+            <motion.button
+                className='flex justify-center items-center h-11 w-11 rounded-full bg-[#131314]'
+                style={{ filter: "brightness(1)" }}
+                whileHover={{ filter: "brightness(1.55)" }}
+            >
+                <img className='h-7' src={'/icons/grid-icon.svg'} alt={'grid icon'}></img>
+            </motion.button>
             <button>
                 <img className='rounded-full max-h-9' src={'/images/me.jpg'} alt={'profile pic'}></img>
             </button>
