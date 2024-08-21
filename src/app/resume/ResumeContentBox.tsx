@@ -20,7 +20,7 @@ const Resume = () => {
         <div className="w-full h-full overflow-y-auto text-[#fffffff1]">
             <header className="text-center mb-3">
                 <h1 className="text-4xl font-semibold">Josh Kim</h1>
-                <div className='flex w-full justify-center space-x-4'>
+                <div className='flex lg:flex-row flex-col w-full justify-center space-x-4'>
                     <p>jshkm10@gmail.com</p>
                     <p>973-668-7005</p>
                     <p>New York City, NY</p>
