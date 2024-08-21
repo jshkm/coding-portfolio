@@ -14,9 +14,9 @@ function Searchbar() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % barContent.length);
-        }, 4000); // Change item every 3 seconds
+        }, 4000);
 
-        return () => clearInterval(interval); // Cleanup interval on unmount
+        return () => clearInterval(interval);
     }, [barContent.length]);
 
     return (

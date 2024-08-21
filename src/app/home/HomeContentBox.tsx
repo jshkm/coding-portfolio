@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
-import Header from './components/Header';
-import Searchbar from './components/Searchbar';
+import Header from '../components/Header';
+import Searchbar from '../components/Searchbar';
 
 interface PageType {
     text: string;

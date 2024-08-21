@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 import Header from '../components/Header'
 import Searchbar from '../components/Searchbar';
 import { motion } from 'framer-motion'
@@ -20,7 +20,7 @@ function WorkContentBox({ pages }: ContentBoxProps) {
         show: {
             opacity: 1,
             transition: {
-                staggerChildren: .75
+                staggerChildren: .5
             }
         }
     }
@@ -50,13 +50,8 @@ function WorkContentBox({ pages }: ContentBoxProps) {
                     className='w-full h-5/6'
                     variants={item}
                 >
-                <motion.button className='w-full h-full bg-[#1E1F20] rounded-xl p-2' whileHover={{ filter: "brightness(1.1)" }}>
-                </motion.button>
-                </motion.div>
-                <motion.div
-                    className='flex w-full items-start'
-                    variants={item}
-                >
+                    <motion.div className='w-full h-[200px] bg-[#1E1F20] rounded-xl p-2' whileHover={{ filter: "brightness(1.1)" }}>
+                    </motion.div>
                 </motion.div>
                 <Back></Back>
             </motion.div>

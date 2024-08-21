@@ -50,7 +50,7 @@ function Header() {
             <div className='flex justify-end items-center h-full w-full space-x-6'>
                 <GridModal></GridModal>
 
-                <button onClick={() => router.push('/')}>
+                <button onClick={() => router.push('/home')}>
                     <img className='rounded-full h-9 max-h-9 min-h-9 min-w-9' src={'/images/me.jpg'} alt={'profile pic'}></img>
                 </button>
             </div>
