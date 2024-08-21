@@ -127,7 +127,7 @@ function WorkContentBox({ pages }: ContentBoxProps) {
         <div className='flex flex-col justify-between items-center h-full w-full px-10 py-6'>
             <Header></Header>
             <motion.div
-                className='flex flex-col items-center justify-between w-full h-5/6 space-y-6 overflow-y-auto p-2'
+                className='flex flex-col items-center justify-between w-full h-5/6 space-y-6 p-2'
                 variants={container}
                 initial="hidden"
                 animate="show"
@@ -140,7 +140,7 @@ function WorkContentBox({ pages }: ContentBoxProps) {
                     <h1 className='font-medium text-[#fffffff1]'>Where can I find Josh's resume?</h1>
                 </motion.div>
                 <motion.div
-                    className='w-full h-3/4'
+                    className='w-full h-5/6 overflow-y-auto'
                     variants={item}
                 >
                     <Link href='/pdfs/resume.pdf'>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import Header from './components/Header';
@@ -50,6 +50,21 @@ function HomeContentBox({ pages }: ContentBoxProps) {
         show: { opacity: 1 }
     }
 
+    const gradientVariants = {
+        initial: {
+            background: 'linear-gradient(to right, #00d0ff, #ff00ff)',
+            WebkitBackgroundClip: 'text',
+            color: 'transparent'
+        },
+        animate: {
+            background: 'linear-gradient(to right, #5181ED, #D36677)',
+            WebkitBackgroundClip: 'text',
+            color: 'transparent',
+            transition: {
+                duration: 3,
+            }
+        }
+    };
     return (
         <div className='flex flex-col justify-between items-center h-full w-full px-10 py-6'>
             <Header></Header>
@@ -59,13 +74,29 @@ function HomeContentBox({ pages }: ContentBoxProps) {
                 initial="hidden"
                 animate="show"
             >
-                <div className='text-5xl space-y-7 text-wrap'>
-                    <motion.h1
-                        className='font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-pink-500 to-red-500'
+                <div className='text-6xl space-y-6 text-wrap'>
+                    <motion.div
+                        className="relative w-full"
                         variants={item}
+                        initial={{ clipPath: 'inset(0% 100% 0% 0%)' }}
+                        animate={{ clipPath: 'inset(0% 0% 0% 0%)' }}
+                        transition={{ duration: 1.3, ease: "easeInOut" }}
                     >
-                        Hello, welcome to Josh Kim's Portfolio
-                    </motion.h1>
+                        <motion.h1
+                            className="font-semibold text-transparent bg-clip-text"
+                            style={{
+                                position: 'relative',
+                                zIndex: 1,
+                                borderRadius: 10,
+                                boxShadow: '0 0 60px rgba(173, 216, 230, 0)'
+                            }}
+                            variants={gradientVariants}
+                            initial="initial"
+                            animate="animate"
+                        >
+                            Hello, welcome to Josh Kim's Portfolio
+                        </motion.h1>
+                    </motion.div>
 
                     <motion.h1
                         className='text-[#444746] font-semibold'
@@ -73,16 +104,17 @@ function HomeContentBox({ pages }: ContentBoxProps) {
                     >
                         How can I help you today?
                     </motion.h1>
-
                 </div>
                 <motion.div
-                    className='flex w-full items-center justify-center overflow-x-auto space-x-2 py-2'
+                    className='flex w-full items-center justify-center'
                     variants={item}
                 //figure out weird scroll behavior
                 >
-                    {pages.map((page, i) => (
-                        <Card key={i} page={page}></Card>
-                    ))}
+                    <div className='w-fit flex overflow-x-auto space-x-2 py-2'>
+                        {pages.map((page, i) => (
+                            <Card key={i} page={page}></Card>
+                        ))}
+                    </div>
                 </motion.div>
             </motion.div>
             <Searchbar></Searchbar>

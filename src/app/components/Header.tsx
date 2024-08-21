@@ -2,6 +2,8 @@ import { motion } from 'framer-motion'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { useState } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import { Router } from 'next/router'
 
 const GridModal = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -41,12 +43,14 @@ const GridModal = () => {
 }
 
 function Header() {
+    const router = useRouter()
+
     return (
         <div className='flex w-full h-10'>
             <div className='flex justify-end items-center h-full w-full space-x-6'>
                 <GridModal></GridModal>
 
-                <button>
+                <button onClick={() => router.push('/')}>
                     <img className='rounded-full h-9 max-h-9 min-h-9 min-w-9' src={'/images/me.jpg'} alt={'profile pic'}></img>
                 </button>
             </div>

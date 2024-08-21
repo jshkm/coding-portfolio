@@ -48,35 +48,32 @@ function AboutContentBox({ pages }: ContentBoxProps) {
                     <h1 className='font-medium text-[#fffffff1]'>Who is Josh Kim?</h1>
                 </motion.div>
                 <motion.div
-                    className='flex flex-col justify-between w-full h-3/4 space-y-6 overflow-y-auto'
+                    className='flex flex-col justify-between w-full h-3/4 overflow-y-auto space-y-12 overflow-x-hidden p-6'
                 >
-                    <motion.button
-                        className='w-full min-h-1/2 flex flex-col lg:flex-row space-x-2 justify-around items-center border border-red-500'
-                        whileHover={{ filter: "brightness(1.1)" }}
+                    <motion.div
+                        className='w-full xl:h-1/2 flex flex-col xl:flex-row space-x-2 space-y-6 justify-around items-center'
                         variants={item}
                     >
-                        <img className='h-1/3 lg:h-full aspect-square object-cover rounded-xl' src={'/images/headshot.jpg'} alt={'headshot'}></img>
-                        <div className='w-1/2 h-full flex flex-col text-left space-y-6 overflow-y-auto justify-center text-2xl'>
-                            <p>Josh is a software developer originally from New Jersey, but now lives in New York City. Josh attended Georgia Tech from the summer of 2020 until the spring of 2023. He received his degree in Computational Media with highest honors.</p>
-                            <p>Josh constantly strives to create software that is a joy to use. From the high level design and interface, to the low level 1's and 0's, Josh is passionate about making sure everything works to benefit the user. With this holistic approach to coding, Josh is intent on creating and learning about the best practices to create the best experiences for his users.</p>
+                        <img className='w-1/2 xl:w-fit xl:h-full aspect-square object-cover rounded-xl' src={'/images/headshot.jpg'} alt={'headshot'}></img>
+                        <div className='w-full xl:w-1/2 xl:h-full flex flex-col text-left justify-center'>
+                            <div className='xl:overflow-y-auto space-y-6'>
+                                <p>Josh is a software developer originally from New Jersey, but now lives in New York City. He attended Georgia Tech from the summer of 2020 until the spring of 2023. He received his degree in Computational Media with highest honors.</p>
+                                <p>Josh constantly strives to create software that is a joy to use. From the high level design and interface, to the low level 1's and 0's, Josh is passionate about making sure everything works to benefit the user. With this holistic approach to coding, Josh is intent on creating and learning about the best practices to create the best experiences for his users.</p>
+                            </div>
                         </div>
-                    </motion.button>
-                    {/* <motion.button
-                        className='w-full h-1/2 flex space-x-2 justify-around items-center'
-                        whileHover={{ filter: "brightness(1.1)" }}
+                    </motion.div>
+                    <motion.div
+                        className='w-full xl:h-1/2 flex flex-col xl:flex-row space-x-2 space-y-6 justify-around items-center'
                         variants={item}
                     >
-                        <div className='w-1/2 h-full flex flex-col text-left space-y-6 overflow-y-auto justify-center text-2xl'>
-                            <p>Josh is a software developer originally from New Jersey, but now lives in New York City. Josh attended Georgia Tech from the summer of 2020 until the spring of 2023. He received his degree in Computational Media with highest honors.</p>
-                            <p>Josh constantly strives to create software that is a joy to use. From the high level design and interface, to the low level 1's and 0's, Josh is passionate about making sure everything works to benefit the user. With this holistic approach to coding, Josh is intent on creating and learning about the best practices to create the best experiences for his users.</p>
+                        <div className='w-full xl:w-1/2 xl:h-full flex flex-col text-left justify-center'>
+                            <div className='xl:overflow-y-auto space-y-6'>
+                                <p>In his free time, Josh is also an avid photographer. He shoots portraits, concerts, and sports. However, he likes shooting street photography the best. One of his favorite things to do is travel to a new place, and take as many photos as he can!</p>
+                                <p>Josh also loves playing a game called Kendama. Kendama is a Japanese ball and cup toy, consisting of three cups and a spike. Josh often travels to compete at events for this game, and has even come in 10th place at the largest Kendama event in Japan, the Kendama World Cup!</p>
+                            </div>
                         </div>
-                        <img className='h-full aspect-square object-cover rounded-xl' src={'/images/josh.jpg'} alt={'josh'}></img>
-                    </motion.button> */}
-                </motion.div>
-                <motion.div
-                    className='flex w-full items-start'
-                    variants={item}
-                >
+                        <img className='w-1/2 xl:w-fit xl:h-full aspect-square object-cover rounded-xl' src={'/images/josh.jpg'} alt={'josh'}></img>
+                    </motion.div>
                 </motion.div>
                 <Back></Back>
             </motion.div>

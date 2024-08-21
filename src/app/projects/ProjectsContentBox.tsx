@@ -47,7 +47,7 @@ function WorkContentBox({ pages }: ContentBoxProps) {
                     <h1 className='font-medium text-[#fffffff1]'>What are Josh's projects?</h1>
                 </motion.div>
                 <motion.div
-                    className='w-full h-3/4'
+                    className='w-full h-5/6'
                     variants={item}
                 >
                 <motion.button className='w-full h-full bg-[#1E1F20] rounded-xl p-2' whileHover={{ filter: "brightness(1.1)" }}>
