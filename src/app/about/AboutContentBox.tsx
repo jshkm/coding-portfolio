@@ -58,7 +58,7 @@ function AboutContentBox({ pages }: ContentBoxProps) {
                         <div className='w-full xl:w-1/2 xl:h-full flex flex-col text-left justify-center'>
                             <div className='xl:overflow-y-auto space-y-6'>
                                 <p>Josh is a software developer originally from New Jersey, but now lives in New York City. He attended Georgia Tech from the summer of 2020 until the spring of 2023. He received his degree in Computational Media with highest honors.</p>
-                                <p>Josh constantly strives to create software that is a joy to use. From the high level design and interface, to the low level 1's and 0's, Josh is passionate about making sure everything works to benefit the user. With this holistic approach to coding, Josh is intent on creating and learning about the best practices to create the best experiences for his users.</p>
+                                <p>Josh constantly strives to create software that is a joy to use. From the high level design and interface, to the low level 1&apos;s and 0&apos;s, Josh is passionate about making sure everything works to benefit the user. With this holistic approach to coding, Josh is intent on creating and learning about the best practices to create the best experiences for his users.</p>
                             </div>
                         </div>
                     </motion.div>

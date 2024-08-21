@@ -44,7 +44,7 @@ function WorkContentBox({ pages }: ContentBoxProps) {
                     variants={item}
                 >
                     <img className='min-h-9 h-9 rounded-full' src={'/images/me.jpg'} alt={'icon'}></img>
-                    <h1 className='font-medium text-[#fffffff1]'>What are Josh's projects?</h1>
+                    <h1 className='font-medium text-[#fffffff1]'>What are Josh&apos;s projects?</h1>
                 </motion.div>
                 <motion.div
                     className='w-full h-5/6'

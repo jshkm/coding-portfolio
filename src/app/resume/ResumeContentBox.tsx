@@ -78,7 +78,7 @@ const Resume = () => {
                                 <li>Utilized Tailwind CSS, Framer Motion, and Headless UI to build a responsive and interactive front end, increasing user engagement by 40%.</li>
                                 <li>Implemented a Flask backend hosted on Heroku, adhering to REST API principles and supporting over 10,000 API requests per month.</li>
                                 <li>Integrated Stripe, Prodigi, and SendGrid APIs to enhance e-commerce functionality: implemented secure transaction processing with Stripe, managed order printing and shipping with Prodigi, and automated customer communications with SendGrid, achieving a 99% email delivery rate and improving scalability.</li>
-                                <li>Secured API keys by managing them with environment variables, ensuring the project's security and integrity.</li>
+                                <li>Secured API keys by managing them with environment variables, ensuring the project&apos;s security and integrity.</li>
                                 <li>Prototyped in Figma to streamline the design process, reducing development time by 30%.</li>
                                 <li>Maintained a GitHub repository for version control, managing over 100 commits.</li>
                             </ul>
@@ -137,7 +137,7 @@ function WorkContentBox({ pages }: ContentBoxProps) {
                     variants={item}
                 >
                     <img className='min-h-9 h-9 rounded-full' src={'/images/me.jpg'} alt={'icon'}></img>
-                    <h1 className='font-medium text-[#fffffff1]'>Where can I find Josh's resume?</h1>
+                    <h1 className='font-medium text-[#fffffff1]'>Where can I find Josh&apos;s resume?</h1>
                 </motion.div>
                 <motion.div
                     className='w-full h-5/6 overflow-y-auto'
@@ -153,7 +153,7 @@ function WorkContentBox({ pages }: ContentBoxProps) {
                     className='flex w-full items-start'
                     variants={item}
                 >
-                    <h1 className='text-left text-[#fffffff1]'>Click above to download Josh's resume!</h1>
+                    <h1 className='text-left text-[#fffffff1]'>Click above to download Josh&apos;s resume!</h1>
                 </motion.div>
                 <Back></Back>
             </motion.div>

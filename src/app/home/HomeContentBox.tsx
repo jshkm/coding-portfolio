@@ -94,7 +94,7 @@ function HomeContentBox({ pages }: ContentBoxProps) {
                             initial="initial"
                             animate="animate"
                         >
-                            Hello, welcome to Josh Kim's Portfolio
+                            Hello, welcome to Josh Kim&apos;s Portfolio
                         </motion.h1>
                     </motion.div>
 

@@ -44,7 +44,7 @@ function WorkContentBox({ pages }: ContentBoxProps) {
                     variants={item}
                 >
                     <img className='min-h-9 h-9 rounded-full' src={'/images/me.jpg'} alt={'icon'}></img>
-                    <h1 className='font-medium text-[#fffffff1]'>Show me Josh's work experience?</h1>
+                    <h1 className='font-medium text-[#fffffff1]'>Show me Josh&apos;s work experience?</h1>
                 </motion.div>
                 <motion.div
                     className='w-full h-5/6 flex flex-col items-center xl:justify-center space-y-6 overflow-y-auto'
@@ -58,7 +58,7 @@ function WorkContentBox({ pages }: ContentBoxProps) {
                         </div>
                         <div className='flex flex-col items-start justify-center w-3/4 xl:h-full p-6 space-y-6'>
                             <h1 className='font-semibold text-2xl'>Humana - <span className='italic'>Full Stack Engineer II</span></h1>
-                            <p className='overflow-y-auto'>Josh currently works as a full stack at Humana. Here, he is working on a team to help modernize Humana's enrollment application process. As an engineer, Josh Kim streamlines large-scale data processing by integrating PySpark with Databricks, modernizes a RESTful API for improved scalability, and works on ETL process to automate application transformations. He optimizes data transfer performance, cloud resource usage, and ensures compliance with data governance standards. His efforts also improve operational transparency and team productivity through Agile practices and Azure DevOps optimization. 
+                            <p className='overflow-y-auto'>Josh currently works as a full stack at Humana. Here, he is working on a team to help modernize Humana&apos;s enrollment application process. As an engineer, Josh Kim streamlines large-scale data processing by integrating PySpark with Databricks, modernizes a RESTful API for improved scalability, and works on ETL process to automate application transformations. He optimizes data transfer performance, cloud resource usage, and ensures compliance with data governance standards. His efforts also improve operational transparency and team productivity through Agile practices and Azure DevOps optimization. 
                             </p>
                         </div>
                     </motion.div>

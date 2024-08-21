@@ -27,6 +27,18 @@ function IntroPage() {
     router.push('/home')
   }
 
+  const gradientVariants = {
+    initial: {
+      background: 'linear-gradient(to right, #00d0ff, #ff00ff)',
+    },
+    animate: {
+      background: 'linear-gradient(to right, #5181ED, #D36677)',
+      transition: {
+        duration: 3,
+      }
+    }
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setIsVisible(false)
@@ -44,23 +56,29 @@ function IntroPage() {
     >
       <AnimatePresence onExitComplete={handleHome}>
         {isVisible && (
-          <motion.button
-            className='flex relative items-center justify-center w-3/4 rounded-full p-6 text-4xl'
-            initial={{ opacity: 0 }}
+          <motion.div
+            className='w-full h-full flex items-center justify-center'
+            style={{ background: 'linear-gradient(127deg, #5181ED, #D36677)' }}
             animate={{ opacity: 1 }}
-            transition={{ type: "spring", stiffness: 77, damping: 16 }}
             exit={{ opacity: 0 }}
-            onClick={() => setIsVisible(false)}
-            whileHover={{ filter: "brightness(1.25)" }}
           >
-            <motion.div variants={item}></motion.div>
-            <motion.div className='absolute bg-[#1E1F20] w-full rounded-full h-20' variants={item}></motion.div>
-            <motion.p className='z-10' variants={item}>Who&nbsp;</motion.p>
-            <motion.p className='z-10' variants={item}>is&nbsp;</motion.p>
-            <motion.p className='z-10' variants={item}>Josh&nbsp;</motion.p>
-            <motion.p className='z-10' variants={item}>Kim?</motion.p>
-            <motion.span variants={item} className="blinking-cursor"></motion.span>
-          </motion.button>
+            <motion.button
+              className='flex relative items-center justify-center w-3/4 rounded-full p-6 text-4xl'
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsVisible(false)}
+              whileHover={{ filter: "brightness(1.25)" }}
+            >
+              <motion.div variants={item}></motion.div>
+              <motion.div className='absolute bg-[#1E1F20] w-full rounded-full h-20' variants={item}></motion.div>
+              <motion.p className='z-10' variants={item}>Who&nbsp;</motion.p>
+              <motion.p className='z-10' variants={item}>is&nbsp;</motion.p>
+              <motion.p className='z-10' variants={item}>Josh&nbsp;</motion.p>
+              <motion.p className='z-10' variants={item}>Kim?</motion.p>
+              <motion.span variants={item} className="blinking-cursor"></motion.span>
+            </motion.button>
+          </motion.div>
         )}
       </AnimatePresence>
     </motion.div>
