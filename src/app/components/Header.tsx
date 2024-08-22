@@ -46,7 +46,7 @@ function Header() {
     const router = useRouter()
 
     return (
-        <div className='flex w-full h-10'>
+        <div className='flex w-full h-10 px-12'>
             <div className='flex justify-end items-center h-full w-full space-x-6'>
                 <GridModal></GridModal>
 
