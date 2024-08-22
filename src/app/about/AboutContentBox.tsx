@@ -35,7 +35,7 @@ function AboutContentBox({ pages }: ContentBoxProps) {
         <div className='flex flex-col justify-between items-center h-full w-full py-6'>
             <Header></Header>
             <motion.div
-                className='flex flex-col items-center justify-between w-full h-5/6 space-y-6 overflow-y-auto'
+                className='flex flex-col items-center justify-between w-full h-5/6 space-y-6'
                 variants={container}
                 initial="hidden"
                 animate="show"
@@ -48,7 +48,7 @@ function AboutContentBox({ pages }: ContentBoxProps) {
                     <h1 className='font-medium text-[#fffffff1]'>Who is Josh Kim?</h1>
                 </motion.div>
                 <motion.div
-                    className='flex flex-col justify-between w-full h-5/6 overflow-y-auto space-y-6 overflow-x-hidden p-6'
+                    className='flex flex-col justify-between w-full h-full overflow-y-auto space-y-6 overflow-x-hidden p-6'
                 >
                     <motion.h1
                         variants={item}

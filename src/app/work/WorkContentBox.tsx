@@ -31,23 +31,23 @@ function WorkContentBox({ pages }: ContentBoxProps) {
     }
 
     return (
-        <div className='flex flex-col justify-between items-center h-full w-full px-10 py-6'>
+        <div className='flex flex-col justify-between items-center h-full w-full py-6'>
             <Header></Header>
             <motion.div
-                className='flex flex-col items-center justify-between w-full h-5/6 space-y-6 overflow-y-auto p-2'
+                className='flex flex-col items-center justify-between w-full h-5/6 space-y-6'
                 variants={container}
                 initial="hidden"
                 animate="show"
             >
                 <motion.div
-                    className='flex w-full h-20 justify-start items-center space-x-2 text-3xl text-wrap'
+                    className='flex w-full h-20 justify-start items-center space-x-2 text-3xl text-wrap px-6'
                     variants={item}
                 >
                     <img className='min-h-9 h-9 rounded-full' src={'/images/me.jpg'} alt={'icon'}></img>
                     <h1 className='font-medium text-[#fffffff1]'>Show me Josh&apos;s work experience?</h1>
                 </motion.div>
                 <motion.div
-                    className='w-full h-5/6 flex flex-col items-start justify-start space-y-6 overflow-y-auto'
+                    className='w-full h-full flex flex-col items-start justify-start space-y-6 overflow-y-auto p-6'
                 >
                     <motion.h1
                         variants={item}

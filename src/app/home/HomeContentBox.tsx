@@ -66,7 +66,7 @@ function HomeContentBox({ pages }: ContentBoxProps) {
         }
     };
     return (
-        <div className='flex flex-col justify-between items-center h-full w-full px-10 py-6'>
+        <div className='flex flex-col justify-between items-center h-full w-full py-6'>
             <Header></Header>
             <motion.div
                 className='flex flex-col items-center w-full space-y-20'
