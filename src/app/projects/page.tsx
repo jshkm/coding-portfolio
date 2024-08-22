@@ -10,13 +10,15 @@ function ProjectsPage() {
 
   const [isOpen, setIsOpen] = useState(true)
   const [isVisible, setIsVisible] = useState(true)
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const [windowWidth, setWindowWidth] = useState(0)
   const currPage = '/projects'
 
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
+
+    handleResize();
 
     window.addEventListener('resize', handleResize);
 
