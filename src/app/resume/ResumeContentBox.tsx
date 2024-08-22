@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/Header'
 import Searchbar from '../components/Searchbar';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import Back from '../components/Back'
 
@@ -26,6 +26,7 @@ const Resume = () => {
                     <p>New York City, NY</p>
                     <p>LinkedIn: jshkm10</p>
                     <p>GitHub: jshkm</p>
+                    <p>Site: joshkim.dev</p>
                 </div>
             </header>
 
@@ -109,6 +110,8 @@ const Resume = () => {
 };
 
 function WorkContentBox({ pages }: ContentBoxProps) {
+    const router = useRouter()
+
     const container = {
         hidden: { opacity: 0 },
         show: {
@@ -140,20 +143,28 @@ function WorkContentBox({ pages }: ContentBoxProps) {
                     <h1 className='font-medium text-[#fffffff1]'>Where can I find Josh&apos;s resume?</h1>
                 </motion.div>
                 <motion.div
-                    className='w-full h-5/6 overflow-y-auto'
-                    variants={item}
+                    className='w-full h-5/6 space-y-6 overflow-y-auto p-6'
                 >
-                    <Link href='/pdfs/resume.pdf'>
-                        <motion.button className='w-full h-full bg-[#1E1F20] rounded-xl p-2' whileHover={{ filter: "brightness(1.1)" }}>
-                            <Resume></Resume>
-                        </motion.button>
-                    </Link>
-                </motion.div>
-                <motion.div
-                    className='flex w-full items-start'
-                    variants={item}
-                >
-                    <h1 className='text-left text-[#fffffff1]'>Click above to download Josh&apos;s resume!</h1>
+                    <motion.h1
+                        variants={item}
+                        className='flex w-full justify-start'
+                    >
+                        Here is Josh's work experience:
+                    </motion.h1>
+                    <motion.button
+                        className='w-full h-5/6 bg-[#1E1F20] rounded-xl p-2'
+                        whileHover={{ filter: "brightness(1.1)" }}
+                        variants={item}
+                        onClick={() => router.push('/pdfs/resume.pdf')}
+                    >
+                        <Resume></Resume>
+                    </motion.button>
+                    <motion.div
+                        className='flex w-full items-start'
+                        variants={item}
+                    >
+                        <h1 className='text-left text-[#fffffff1]'>Click above to download Josh&apos;s resume!</h1>
+                    </motion.div>
                 </motion.div>
                 <Back></Back>
             </motion.div>

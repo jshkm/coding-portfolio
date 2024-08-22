@@ -77,7 +77,7 @@ function Sidebar({ pages, currPage, isVisible, setIsVisible, isOpen, setIsOpen }
             exit={{ x: '-100%' }}
             layout
           >
-            <h2 className='font-medium text-[#B1B2B2] text-xl'>Recent</h2>
+            <h2 className='font-semibold text-[#B1B2B2] text-xl'>Recent</h2>
             <div className='flex flex-col justify-start -translate-x-3 md:translate-x-0 items-start md:items-center w-full h-1/2 space-y-2'>
               {pages.map((page, i) => (
                 <motion.button

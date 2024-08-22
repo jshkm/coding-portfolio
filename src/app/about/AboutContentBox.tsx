@@ -48,8 +48,14 @@ function AboutContentBox({ pages }: ContentBoxProps) {
                     <h1 className='font-medium text-[#fffffff1]'>Who is Josh Kim?</h1>
                 </motion.div>
                 <motion.div
-                    className='flex flex-col justify-between w-full h-3/4 overflow-y-auto space-y-12 overflow-x-hidden p-6'
+                    className='flex flex-col justify-between w-full h-5/6 overflow-y-auto space-y-12 overflow-x-hidden p-6'
                 >
+                    <motion.h1
+                        variants={item}
+                        className='flex w-full justify-start'
+                    >
+                        Here is some information about Josh:
+                    </motion.h1>
                     <motion.div
                         className='w-full xl:h-1/2 flex flex-col xl:flex-row space-x-2 space-y-6 justify-around items-center'
                         variants={item}
