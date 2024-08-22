@@ -53,7 +53,7 @@ function WorkContentBox({ pages }: ContentBoxProps) {
                         variants={item}
                         className='flex w-full justify-start'
                     >
-                        Here are some of Josh's projects:
+                        Here are some of Josh&apos;s projects:
                     </motion.h1>
                     <motion.div
                         variants={item} 

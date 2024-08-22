@@ -149,7 +149,7 @@ function WorkContentBox({ pages }: ContentBoxProps) {
                         variants={item}
                         className='flex w-full justify-start'
                     >
-                        Here is Josh's work experience:
+                        Here is Josh&apos;s work experience:
                     </motion.h1>
                     <motion.button
                         className='w-full h-5/6 bg-[#1E1F20] rounded-xl p-2'

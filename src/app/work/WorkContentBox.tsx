@@ -53,7 +53,7 @@ function WorkContentBox({ pages }: ContentBoxProps) {
                         variants={item}
                         className='flex w-full justify-start'
                     >
-                        Here is Josh's work experience:
+                        Here is Josh&apos;s work experience:
                     </motion.h1>
                     <motion.div
                         className='xl:h-2/5 w-full flex flex-col xl:flex-row justify-center items-center space-x-6'
