@@ -6,6 +6,8 @@ function Searchbar() {
     const barContent = [
         { 'text': 'Click to add Josh on Linkedin!', 'url': 'https://www.linkedin.com/in/jshkm10/' },
         { 'text': 'Did you know Josh is also a photographer? Click here to see his work.', 'url': 'https://www.jshkmphoto.com' },
+        { 'text': "Click here to see Josh's project in GitHub!", 'url': 'https://github.com/jshkm' },
+        { 'text': "Check out Josh on Instagram!", 'url': 'https://www.instagram.com/joshkim10/' },
     ]
     //add more content
 
@@ -21,8 +23,10 @@ function Searchbar() {
 
     return (
         <Link href={barContent[currentIndex].url} className='h-16 max-w-[872px] w-full px-6'>
-            <button
-                className='flex items-center justify-start bg-[#1E1F20] h-full w-full rounded-full p-6'>
+            <motion.button
+                className='flex items-center justify-start bg-[#1E1F20] h-full w-full rounded-full p-6'
+                whileHover={{ filter: "brightness(1.1)" }}
+            >
                 <AnimatePresence mode='wait'>
                     <motion.p
                         key={currentIndex}
@@ -35,7 +39,7 @@ function Searchbar() {
                         {barContent[currentIndex].text}<span className="blinking-cursor translate-y-[3px]"></span>
                     </motion.p>
                 </AnimatePresence>
-            </button>
+            </motion.button>
         </Link >
     )
 }
