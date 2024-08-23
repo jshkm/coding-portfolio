@@ -43,7 +43,7 @@ function WorkContentBox({ pages }: ContentBoxProps) {
             { 'name': 'Tic Tac Toe Two', 'url': 'https://github.com/jshkm/tic-tac-toe-two', 'image': '/images/tic-tac-toe-two.jpg', 'description': 'A fun project to brush up on Next.js and Tailwind CSS skills. Deployed with Vercel.' }
         ],
         [
-            { 'name': 'Movie Visualization', 'url': 'https://github.com/jshkm/d3-project', 'image': '/images/d3.jpg', 'description': "A visualization built with HTML, CSS, JavaScript, and integrated with the D3 JavaScript library. This graph takes movie information and creates a scatterplot to discover trends." },
+            { 'name': 'Movie Visualization', 'url': 'https://github.com/jshkm/d3-project', 'image': '/images/d3.jpg', 'description': "A visualization about movies built with HTML, CSS, JavaScript, and integrated with D3." },
             { 'name': 'Computer Audio Project', 'url': 'https://github.com/jshkm/computer-audio', 'image': '/images/audio.jpg', 'description': 'A project built in Java with Processing to create a simulation which sonifies data to help improve brushing teeth.' }
         ]
     ]
