@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import React from 'react';
 import Header from '../components/Header'
 import Searchbar from '../components/Searchbar';
 import { motion } from 'framer-motion'
 import Back from '../components/Back';
+import { useRouter } from 'next/navigation'
 
 interface PageType {
     text: string;
@@ -15,6 +16,8 @@ interface ContentBoxProps {
 }
 
 function WorkContentBox({ pages }: ContentBoxProps) {
+    const router = useRouter()
+
     const container = {
         hidden: { opacity: 0 },
         show: {
@@ -29,6 +32,17 @@ function WorkContentBox({ pages }: ContentBoxProps) {
         hidden: { opacity: 0 },
         show: { opacity: 1 }
     }
+
+    const projects = [
+        [
+            { 'name': 'Coding Portfolio', 'url': 'https://github.com/jshkm/coding-portfolio', 'image': '/images/coding.png', 'description': "A website built with React, Next.js and Typescript hosting Josh's professional work." },
+            { 'name': 'Photography E-Commerce Website', 'url': 'https://github.com/jshkm/photo-portfolio', 'image': '/images/photo.jpg', 'description': 'A full stack project built with a Next.js frontend and a Flask App backend in Python, with Stripe and SendGrid APIs.' }
+        ],
+        [
+            { 'name': 'Auto Industry Portal iOS and Android App', 'url': 'https://github.com/JuniorDesign2311/JIA2311-TheRedline', 'image': '/images/redline.jpg', 'description': "An app for the car community to view and create car events. Built with a React frontend, Firebase backend and Google Maps integration." },
+            { 'name': 'Tic Tac Toe Two', 'url': 'https://github.com/jshkm/tic-tac-toe-two', 'image': '/images/tic-tac-toe-two.jpg', 'description': 'A fun project to brush up on Next.js and Tailwind CSS skills. Deployed with Vercel.' }
+        ]
+    ]
 
     return (
         <div className='flex flex-col justify-between items-center h-full w-full py-6'>
@@ -55,12 +69,36 @@ function WorkContentBox({ pages }: ContentBoxProps) {
                     >
                         Here are some of Josh&apos;s projects:
                     </motion.h1>
-                    <motion.div
-                        variants={item} 
-                        className='w-[500px] aspect-[5/4] bg-[#1E1F20] rounded-xl p-2'
-                        whileHover={{ filter: "brightness(1.1)" }}
-                    >
-                    </motion.div>
+                    <div className='flex flex-col w-full space-y-6 justify-center'>
+                        {projects.map((project, i) => (
+                            <div className='flex flex-col xl:flex-row w-full xl:space-x-6 space-y-6 xl:space-y-0'>
+                                <motion.button
+                                    variants={item}
+                                    className='flex w-full items-center justify-around h-56 bg-[#1E1F20] rounded-xl'
+                                    whileHover={{ filter: "brightness(1.1)" }}
+                                    onClick={() => router.push(project[0].url)}
+                                >
+                                    <img className='h-5/6 rounded-xl drop-shadow-md' src={project[0].image} alt={project[0].name}></img>
+                                    <div className='flex flex-col w-1/2 h-5/6 items-start justify-center py-6 text-left space-y-2'>
+                                        <p className=''>{project[0].name}</p>
+                                        <p>{project[0].description}</p>
+                                    </div>
+                                </motion.button>
+                                <motion.button
+                                    variants={item}
+                                    className='flex w-full items-center justify-around h-56 bg-[#1E1F20] rounded-xl'
+                                    whileHover={{ filter: "brightness(1.1)" }}
+                                    onClick={() => router.push(project[1].url)}
+                                >
+                                    <img className='h-5/6 rounded-xl drop-shadow-md' src={project[1].image} alt={project[1].name}></img>
+                                    <div className='flex flex-col w-1/2 h-5/6 items-start justify-center py-6 text-left space-y-2'>
+                                        <p className=''>{project[1].name}</p>
+                                        <p>{project[1].description}</p>
+                                    </div>
+                                </motion.button>
+                            </div>
+                        ))}
+                    </div>
                 </motion.div>
                 <Back></Back>
             </motion.div>

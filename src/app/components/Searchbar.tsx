@@ -20,7 +20,7 @@ function Searchbar() {
     }, [barContent.length]);
 
     return (
-        <Link href={barContent[currentIndex].url} className='h-16 max-w-[824px] w-full'>
+        <Link href={barContent[currentIndex].url} className='h-16 max-w-[872px] w-full px-6'>
             <button
                 className='flex items-center justify-start bg-[#1E1F20] h-full w-full rounded-full p-6'>
                 <AnimatePresence mode='wait'>

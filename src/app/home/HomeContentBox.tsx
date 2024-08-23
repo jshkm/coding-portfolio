@@ -69,7 +69,7 @@ function HomeContentBox({ pages }: ContentBoxProps) {
         <div className='flex flex-col justify-between items-center h-full w-full py-6'>
             <Header></Header>
             <motion.div
-                className='flex flex-col items-center w-full space-y-20'
+                className='flex flex-col items-center w-full space-y-20 px-6'
                 variants={container}
                 initial="hidden"
                 animate="show"
