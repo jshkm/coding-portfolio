@@ -9,7 +9,6 @@ function Searchbar() {
         { 'text': "Click here to see Josh's project in GitHub!", 'url': 'https://github.com/jshkm' },
         { 'text': "Check out Josh on Instagram!", 'url': 'https://www.instagram.com/joshkim10/' },
     ]
-    //add more content
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
