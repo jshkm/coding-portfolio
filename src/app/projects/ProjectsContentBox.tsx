@@ -82,7 +82,7 @@ function WorkContentBox({ pages }: ContentBoxProps) {
                                     whileHover={{ filter: "brightness(1.1)" }}
                                     onClick={() => router.push(project[0].url)}
                                 >
-                                    <img className='h-5/6 rounded-xl drop-shadow-md' src={project[0].image} alt={project[0].name}></img>
+                                    <img className='h-1/2 md:h-5/6 rounded-xl drop-shadow-md' src={project[0].image} alt={project[0].name}></img>
                                     <div className='flex flex-col w-1/2 h-5/6 items-start justify-center py-6 text-left space-y-2'>
                                         <p className=''>{project[0].name}</p>
                                         <p>{project[0].description}</p>
@@ -94,7 +94,7 @@ function WorkContentBox({ pages }: ContentBoxProps) {
                                     whileHover={{ filter: "brightness(1.1)" }}
                                     onClick={() => router.push(project[1].url)}
                                 >
-                                    <img className='h-5/6 rounded-xl drop-shadow-md' src={project[1].image} alt={project[1].name}></img>
+                                    <img className='h-1/2 md:h-5/6 rounded-xl drop-shadow-md' src={project[1].image} alt={project[1].name}></img>
                                     <div className='flex flex-col w-1/2 h-5/6 items-start justify-center py-6 text-left space-y-2'>
                                         <p className=''>{project[1].name}</p>
                                         <p>{project[1].description}</p>
