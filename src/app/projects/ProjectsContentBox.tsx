@@ -41,6 +41,10 @@ function WorkContentBox({ pages }: ContentBoxProps) {
         [
             { 'name': 'Auto Industry Portal iOS and Android App', 'url': 'https://github.com/JuniorDesign2311/JIA2311-TheRedline', 'image': '/images/redline.jpg', 'description': "An app for the car community to view and create car events. Built with a React frontend, Firebase backend and Google Maps integration." },
             { 'name': 'Tic Tac Toe Two', 'url': 'https://github.com/jshkm/tic-tac-toe-two', 'image': '/images/tic-tac-toe-two.jpg', 'description': 'A fun project to brush up on Next.js and Tailwind CSS skills. Deployed with Vercel.' }
+        ],
+        [
+            { 'name': 'Movie Visualization', 'url': 'https://github.com/jshkm/d3-project', 'image': '/images/d3.jpg', 'description': "A visualization built with HTML, CSS, JavaScript, and integrated with the D3 JavaScript library. This graph takes movie information and creates a scatterplot to discover trends." },
+            { 'name': 'Tic Tac Toe Two', 'url': 'https://github.com/jshkm/tic-tac-toe-two', 'image': '/images/tic-tac-toe-two.jpg', 'description': 'A fun project to brush up on Next.js and Tailwind CSS skills. Deployed with Vercel.' }
         ]
     ]
 
@@ -71,7 +75,7 @@ function WorkContentBox({ pages }: ContentBoxProps) {
                     </motion.h1>
                     <div className='flex flex-col w-full space-y-6 justify-center'>
                         {projects.map((project, i) => (
-                            <div className='flex flex-col xl:flex-row w-full xl:space-x-6 space-y-6 xl:space-y-0'>
+                            <div key={i} className='flex flex-col xl:flex-row w-full xl:space-x-6 space-y-6 xl:space-y-0'>
                                 <motion.button
                                     variants={item}
                                     className='flex w-full items-center justify-around h-56 bg-[#1E1F20] rounded-xl'
