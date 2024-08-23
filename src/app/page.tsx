@@ -39,13 +39,13 @@ function IntroPage() {
     }
   };
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setIsVisible(false)
-  //   }, 4500);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsVisible(false)
+    }, 4500);
 
-  //   return () => clearInterval(interval);
-  // }, [])
+    return () => clearInterval(interval);
+  }, [])
 
   return (
     <motion.div
