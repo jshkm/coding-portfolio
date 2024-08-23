@@ -39,13 +39,13 @@ function IntroPage() {
     }
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsVisible(false)
-    }, 4500);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setIsVisible(false)
+  //   }, 4500);
 
-    return () => clearInterval(interval);
-  }, [])
+  //   return () => clearInterval(interval);
+  // }, [])
 
   return (
     <motion.div
@@ -63,7 +63,7 @@ function IntroPage() {
             exit={{ opacity: 0 }}
           >
             <motion.button
-              className='flex relative items-center justify-center w-3/4 rounded-full p-6 text-4xl'
+              className='flex relative items-center justify-center w-11/12 md:w-3/4 rounded-full p-6 text-4xl'
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
