@@ -1,5 +1,5 @@
 # Josh Kim's Coding Portfolio
-Built with Next.js, Tailwind CSS, Framer Motion and Typescript. A fun frontend to showcase my coding work!
+Built in a 1 week sprint with Next.js, Tailwind CSS, Framer Motion and Typescript. A fun frontend to showcase my coding work!
 
 Click [here](https://www.joshkim.dev/) to see the website!
 
