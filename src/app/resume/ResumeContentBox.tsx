@@ -73,6 +73,16 @@ const Resume = () => {
                     <h2 className="text-2xl font-semibold">Projects</h2>
                     <div className='ml-8'>
                         <div className="mb-6">
+                            <h3 className="text-xl font-semibold">Generative AI Healthcare Provider Search Engine Humana Q4 Hackathon (2nd Place)</h3>
+                            <ul className="list-disc list-inside">
+                                <li>Recruited and led a team of engineers to enhance Humana’s provider search engine by integrating OpenAI’s API to
+                                    return more relevant healthcare providers</li>
+                                <li>Extracted contextual information from user queries, achieving an 80% reduction in “no results” outcomes</li>
+                                <li>Presented the completed application to stakeholders within a 3 day timeframe</li>
+                                <li>Won 2nd place out of returning winning teams within Humana</li>
+                            </ul>
+                        </div>
+                        <div className="mb-6">
                             <h3 className="text-xl font-semibold">Personal Photography Print on Demand Website</h3>
                             <ul className="list-disc list-inside">
                                 <li>Built a Next.js website hosted and deployed on Vercel, leveraging Vercel Analytics for performance monitoring. Achieved 99.9% uptime and reduced page load times by 50%.</li>
@@ -100,7 +110,7 @@ const Resume = () => {
                 <section className="mb-3">
                     <h2 className="text-2xl font-semibold">Skills</h2>
                     <div className='ml-8'>
-                        <p><span className='font-semibold'>Languages/Tools: </span>Python, Pyspark, Databricks, MongoDB, .NET, Splunk, SonarQube, JavaScript, Next.js, TypeScript, Flask, Java, PostgreSQL, Firebase, Azure, ADLS, Confluent, Postman, Google Analytics, React/React Native, Expo Go, TestFlight, GitHub, Pytest, Vercel, HTML, CSS</p>
+                        <p><span className='font-semibold'>Languages/Tools: </span>Python, Pyspark, Databricks, MongoDB, .NET, Splunk, SonarQube, JavaScript, Next.js, TypeScript, Flask, Java, PostgreSQL, Firebase, Supabase, Azure, ADLS, Confluent, Postman, OpenAI, Google Analytics, React/React Native, Expo Go, TestFlight, GitHub, Pytest, Vercel, HTML, CSS</p>
                         <p><span className='font-semibold'><br></br>Relevant Concepts: </span>Cloud Computing, AGILE/SAFE, Object-Oriented Programming, Data Structures & Algorithms, Design & Analysis of Algorithms, Computer Organization and Programming, Systems and Networks, Databases, Linear Algebra, Discrete Mathematics</p>
                     </div>
                 </section>

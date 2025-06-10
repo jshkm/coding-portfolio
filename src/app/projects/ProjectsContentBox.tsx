@@ -35,12 +35,12 @@ function WorkContentBox({ pages }: ContentBoxProps) {
 
     const projects = [
         [
+            { 'name': 'Humana Generative AI Healthcare Provider Search Engine', 'url': 'https://www.linkedin.com/posts/jshkm10_humana-hackathon-presentation-deliverable-activity-7338198770632847360-JRjW?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbnCZIBnBAtm2pipngA3vmQuSmW0T_s1P8', 'image': '/images/hackathon.jpg', 'description': 'Led a team to 2nd place to enhance Humana’s provider search engine using OpenAI’s API, reducing “no results” outcomes by 80%.' },
             { 'name': 'Coding Portfolio', 'url': 'https://github.com/jshkm/coding-portfolio', 'image': '/images/coding.png', 'description': "A website built with React, Next.js and Typescript hosting Josh's professional work." },
-            { 'name': 'Photography E-Commerce Website', 'url': 'https://github.com/jshkm/photo-portfolio', 'image': '/images/photo.jpg', 'description': 'A full stack project built with a Next.js frontend and a Flask App backend in Python, with Stripe and SendGrid APIs.' }
         ],
         [
+            { 'name': 'Photography E-Commerce Website', 'url': 'https://github.com/jshkm/photo-portfolio', 'image': '/images/photo.jpg', 'description': 'A full stack project built with a Next.js frontend and a Flask App backend in Python, with Stripe and SendGrid APIs.' },
             { 'name': 'Auto Industry Portal iOS and Android App', 'url': 'https://github.com/JuniorDesign2311/JIA2311-TheRedline', 'image': '/images/redline.jpg', 'description': "An app for the car community to view and create car events. Built with a React frontend, Firebase backend and Google Maps integration." },
-            { 'name': 'Tic Tac Toe Two', 'url': 'https://github.com/jshkm/tic-tac-toe-two', 'image': '/images/tic-tac-toe-two.jpg', 'description': 'A fun project to brush up on Next.js and Tailwind CSS skills. Deployed with Vercel.' }
         ],
         [
             { 'name': 'Movie Visualization', 'url': 'https://github.com/jshkm/d3-project', 'image': '/images/d3.jpg', 'description': "A visualization about movies built with HTML, CSS, JavaScript, and integrated with D3." },
@@ -78,7 +78,7 @@ function WorkContentBox({ pages }: ContentBoxProps) {
                             <div key={i} className='flex flex-col xl:flex-row w-full xl:space-x-6 space-y-6 xl:space-y-0'>
                                 <motion.button
                                     variants={item}
-                                    className='flex w-full items-center justify-around h-56 bg-[#1E1F20] rounded-xl'
+                                    className='flex w-1/2 items-center justify-around h-56 bg-[#1E1F20] rounded-xl'
                                     whileHover={{ filter: "brightness(1.1)" }}
                                     onClick={() => router.push(project[0].url)}
                                 >
@@ -90,7 +90,7 @@ function WorkContentBox({ pages }: ContentBoxProps) {
                                 </motion.button>
                                 <motion.button
                                     variants={item}
-                                    className='flex w-full items-center justify-around h-56 bg-[#1E1F20] rounded-xl'
+                                    className='flex w-1/2 items-center justify-around h-56 bg-[#1E1F20] rounded-xl'
                                     whileHover={{ filter: "brightness(1.1)" }}
                                     onClick={() => router.push(project[1].url)}
                                 >
